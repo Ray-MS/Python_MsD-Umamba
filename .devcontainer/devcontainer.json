@@ -1,0 +1,27 @@
+{
+    "name": "Medical Image Segmentation",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "runArgs": [
+        "--name=MsD-UMamba",
+        "--gpus=all",
+        "--ipc=host"
+    ],
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "mounts": [
+        "source=/path/to/data,target=/workspaces/${localWorkspaceFolderBasename}/data,type=bind",
+        "source=/path/to/results,target=/workspaces/${localWorkspaceFolderBasename}/results,type=bind"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.autopep8",
+                "ms-python.isort",
+                "ms-python.python",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    }
+}

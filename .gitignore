@@ -1,0 +1,17 @@
+# test scripts
+bar.*
+
+# datasets, generated caches, and experiment outputs
+data/
+results/
+display/
+**/cache/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# environments and tooling caches
+.venv/
+.pytest_cache/
+.mypy_cache/
